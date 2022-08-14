@@ -1,0 +1,12 @@
+body {
+	font-family: var(--ff-primary);
+	color: var(--clr-neutral-700);
+	background: var(--clr-neutral-200);
+}
+
+h1,
+h2,
+h3 {
+	font-weight: var(--fw-600);
+	line-height: 1.15;
+}

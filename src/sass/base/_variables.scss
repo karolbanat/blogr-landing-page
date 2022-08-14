@@ -4,17 +4,84 @@ $breakpoints: (
 	large: 62em,
 );
 
-$colors: ();
+$colors: (
+	primary: (
+		300: hsl(355 100% 74%),
+		400: hsl(356 100% 66%),
+		700: hsl(208 49% 24%),
+	),
+	neutral: (
+		100: hsl(0 0% 100%),
+		200: hsl(0 0% 98%),
+		300: hsl(240 2% 79%),
+		700: hsl(207 13% 34%),
+		800: hsl(240 10% 16%),
+		900: hsl(0 0% 0%),
+	),
+	gradient: (
+		300: hsl(13 100% 72%),
+		400: hsl(353 100% 62%),
+		600: hsl(237 23% 32%),
+		700: hsl(237 17% 21%),
+	),
+);
 
 $font-sizes: (
-	small: (),
-	medium: (),
+	small: (
+		400: 1.6rem,
+		500: 1.8rem,
+		600: 2.8rem,
+		700: 4rem,
+		900: 3.6rem,
+	),
+	medium: (
+		500: 1.6rem,
+		600: 4rem,
+		900: 6.4rem,
+	),
 );
-$font-weights: ();
+/*  --- */
+// 'exceptions'
+// 1.6rem -> 1.5rem         sub nav link
+// 2.8rem -> 2.8rem         section subheading
+// 1.8rem -> 1.5rem         footer links
+// 1.8rem -> 1.5rem         footer nav heading
+// 1.8rem -> 2.0rem         header text
 
-$border-radius: ();
+// 1.6rem -> 1.6rem         nav button sign up link
+// 1.6rem -> 1.6rem         buttons
+// 1.6rem -> 1.6rem         body text
+// 1.8rem -> 1.6rem         nav main link
+// 1.8rem -> 1.6rem         nav login link
+// 2.8rem -> 4.0rem         section heading
+// 4rem -> 4rem             section heading big (white)
+// 3.6rem -> 6.4rem         primary heading
+/*  ---  */
+
+$font-weights: (
+	300: 300,
+	400: 400,
+	500: 500,
+	600: 600,
+	700: 700,
+);
+
+$border-radius: (
+	200: 0.5rem,
+	800: 10rem,
+	900: 100vmax,
+);
 
 $spacings: (
-	em: (),
-	rem: (),
+	em: (
+		200: 0.5em,
+		300: 1em,
+		400: 1.5em,
+		500: 2em,
+		600: 2.5em,
+	),
+	rem: (
+		400: 2.4rem,
+		900: 10rem,
+	),
 );

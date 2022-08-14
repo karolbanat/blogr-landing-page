@@ -10,6 +10,8 @@
 	}
 
 	// font families
+	--ff-primary: 'Overpass', sans-serif;
+	--ff-secondary: 'Ubuntu', sans-serif;
 
 	// font wieghts
 	@each $font-weight, $value in variables.$font-weights {
@@ -29,6 +31,19 @@
 				}
 			}
 		}
+	}
+
+	// font size exceptions
+	--fz-dropdown-link: var(--fz-400);
+	--fz-header-text: var(--fz-500);
+	--fz-section-heading-sm: var(--fz-600);
+	--fz-footer: var(--fz-500);
+
+	@include mixins.mq(medium) {
+		--fz-dropdown-link: 1.5rem;
+		--fz-header-text: 2rem;
+		--fz-section-heading-sm: 2.8rem;
+		--fz-footer: 1.5rem;
 	}
 
 	// border radius
