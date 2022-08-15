@@ -1,0 +1,8 @@
+.section-heading {
+	font-size: var(--fz-700);
+
+	&--small {
+		margin-bottom: var(--spacing-em-300);
+		font-size: var(--fz-600);
+	}
+}

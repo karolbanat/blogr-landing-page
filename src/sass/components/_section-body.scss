@@ -1,0 +1,16 @@
+@use '../base/mixins';
+
+.section-body {
+	--flow-spacer: clamp(var(--spacing-em-600), 4vw, var(--spacing-rem-700));
+	margin-inline: auto;
+	max-width: 60ch;
+
+	@include mixins.mq(large) {
+		padding-right: var(--spacing-rem-700);
+	}
+
+	&__heading {
+		margin-bottom: var(--spacing-em-200);
+		font-size: var(--fz-section-heading-sm);
+	}
+}

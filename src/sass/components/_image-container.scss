@@ -1,0 +1,21 @@
+@use '../base/mixins';
+
+.image-container {
+	// width: 50vw;
+
+	&__image {
+		@include mixins.max-mq(large) {
+			margin-inline: auto;
+		}
+
+		@include mixins.mq(large) {
+			&--right {
+				transform: scale(1.5) translateX(25%);
+			}
+
+			&--left {
+				transform: scale(1.5) translateX(-25%);
+			}
+		}
+	}
+}

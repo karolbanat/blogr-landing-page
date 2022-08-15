@@ -1,0 +1,11 @@
+.section {
+	--padding-top-min: var(--spacing-rem-900);
+	--padding-top-max: calc(var(--padding-top-min) * 1.5);
+	--padding-top: clamp(var(--padding-top-min), 15vw, var(--padding-top-max));
+	--padding-bottom-min: var(--spacing-rem-900);
+	--padding-bottom-max: calc(var(--padding-bottom-min) * 2);
+	--padding-bottom: clamp(var(--padding-bottom-min), 20vw, var(--padding-bottom-max));
+
+	padding-top: var(--padding-top);
+	padding-bottom: var(--padding-bottom);
+}

@@ -9,3 +9,9 @@
 		text-align: center;
 	}
 }
+
+.text-align-center-md {
+	@include mixins.max-mq(large) {
+		text-align: center;
+	}
+}

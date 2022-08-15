@@ -3,9 +3,11 @@
 
 .button {
 	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	/* spacing */
-	padding-block: var(--spacing-em-300);
-	padding-inline: var(--spacing-em-600);
+	padding: var(--spacing-em-300);
+	width: 13.7rem;
 	/* typography */
 	font-size: var(--fz-400);
 	font-weight: var(--fw-700);

@@ -3,8 +3,23 @@
 .even-columns {
 	display: grid;
 
-	@include mixins.mq(medium) {
+	@include mixins.mq(large) {
+		align-items: center;
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
+	}
+
+	&--small {
+		@include mixins.mq(medium) {
+			align-items: center;
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+		}
+	}
+}
+
+.grid-first-row-sm {
+	@include mixins.max-mq(large) {
+		grid-row: 1;
 	}
 }
