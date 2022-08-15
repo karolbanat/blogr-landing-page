@@ -1,0 +1,11 @@
+@use '../base/mixins';
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-center-sm {
+	@include mixins.max-mq(medium) {
+		text-align: center;
+	}
+}
