@@ -2,7 +2,7 @@
 @use '../base/functions';
 
 .primary-navigation {
-	position: relative;
+	position: relative; // for positioning nav absolutely on mobile
 	display: flex;
 	align-items: center;
 	gap: var(--spacing-rem-700);
@@ -10,22 +10,31 @@
 	line-height: 1.1;
 	z-index: 100;
 
+	/* for mobile space between logo and toggle button */
 	@include mixins.max-mq(medium) {
 		justify-content: space-between;
 	}
 
 	/* links and buttons */
 	&__nav {
-		width: 100%;
 		padding: var(--spacing-rem-400);
+		width: 100%;
 		z-index: 100;
 
 		/* mobile */
 		@include mixins.max-mq(medium) {
+			// so it won't stretch to 100% on a little bigger screens
+			--max-width: 50rem;
+
+			/* positioning  */
 			position: absolute;
+			right: 0;
 			bottom: 0;
 			transform: translateY(100%);
+			/*  */
 			display: none;
+			width: min(100%, var(--max-width));
+			/* styles */
 			background-color: var(--clr-neutral-100);
 			border-radius: var(--borr-200);
 			box-shadow: 0 2rem 4rem hsl(0 0% 0% / 0.24);
@@ -72,9 +81,10 @@
 		background-color: fade-out($bg-color, 0.92);
 		border-radius: var(--borr-200);
 
+		/* on desktop/tablet */
 		@include mixins.mq(medium) {
 			position: absolute;
-			bottom: calc(var(--spacing-em-200) * -1);
+			bottom: calc(var(--spacing-em-300) * -1);
 			transform: translateY(100%);
 			margin-top: 0;
 			background-color: var(--clr-neutral-100);
@@ -89,12 +99,14 @@
 
 	/* link and arrow */
 	&__dropdown-toggle {
+		/* arrow and text align next ot each other  */
 		display: inline-flex;
 		align-items: center;
 		gap: var(--spacing-em-200);
 
 		&::after {
 			--content: url('../images/icon-arrow-dark.svg');
+
 			content: var(--content);
 			display: block;
 			transition: transform 0.35s ease;
@@ -137,6 +149,7 @@
 		text-decoration: none;
 		color: var(--clr-primary-700);
 
+		/* mobile */
 		@include mixins.max-mq(medium) {
 			font-weight: var(--fw-600);
 			opacity: 0.75;

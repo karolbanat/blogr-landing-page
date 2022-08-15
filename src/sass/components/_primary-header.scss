@@ -21,6 +21,7 @@
 		margin-top: var(--spacing-em-200);
 	}
 
+	/* background gradient with image */
 	&::before {
 		$bg-gradient-left: functions.get-color(gradient, 300);
 		$bg-gradient-right: functions.get-color(gradient, 400);
@@ -32,8 +33,8 @@
 		width: 100%;
 		height: 100%;
 		background-image: url('../../../dist/images/bg-pattern-intro-desktop.svg'),
-			linear-gradient(115deg, $bg-gradient-left 0%, $bg-gradient-right 75%);
-		background-repeat: no-repeat, no-repeat;
+			linear-gradient(135deg, $bg-gradient-left 0%, $bg-gradient-right 75%);
+		background-repeat: no-repeat;
 		background-position: 40% 35%;
 		background-size: 300%;
 		border-bottom-left-radius: var(--borr-800);
