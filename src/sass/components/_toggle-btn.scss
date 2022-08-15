@@ -1,0 +1,26 @@
+.toggle-btn {
+	--width: 4.8rem;
+	display: inline-grid;
+	place-content: center;
+	width: var(--width);
+	aspect-ratio: 1;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	&__icon-hamburger {
+		display: block;
+	}
+
+	&__icon-close {
+		display: none;
+	}
+
+	&[data-expanded] &__icon-hamburger {
+		display: none;
+	}
+
+	&[data-expanded] &__icon-close {
+		display: block;
+	}
+}

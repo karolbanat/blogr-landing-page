@@ -1,0 +1,54 @@
+@use '../base/mixins';
+@use '../base/functions';
+
+.button {
+	display: inline-flex;
+	/* spacing */
+	padding-block: var(--spacing-em-300);
+	padding-inline: var(--spacing-em-600);
+	/* typography */
+	font-size: var(--fz-400);
+	font-weight: var(--fw-700);
+	line-height: 1;
+	text-decoration: none;
+	color: var(--clr-text);
+	/* style */
+	background: var(--bg-button);
+	border: none;
+	border-radius: var(--borr-900);
+	/* other */
+	cursor: pointer;
+	transition: background-color 0.35s ease, color 0.35s ease;
+
+	&--white {
+		--clr-text: var(--clr-primary-400);
+		--bg-button: var(--clr-neutral-100);
+
+		&:hover {
+			--clr-text: var(--clr-neutral-100);
+			--bg-button: var(--clr-primary-300);
+		}
+	}
+
+	&--transparent {
+		--clr-text: var(--clr-neutral-100);
+		--bg-button: transparent;
+
+		border: 1px solid var(--clr-neutral-100);
+
+		&:hover {
+			color: var(--clr-primary-400);
+			background-color: var(--clr-neutral-100);
+		}
+	}
+
+	&--gradient {
+		@include mixins.max-mq(medium) {
+			$bg-gradient-left: functions.get-color(gradient, 300);
+			$bg-gradient-right: functions.get-color(gradient, 400);
+			--clr-text: var(--clr-neutral-100);
+
+			background-image: linear-gradient(90deg, $bg-gradient-left 0%, $bg-gradient-right 100%);
+		}
+	}
+}

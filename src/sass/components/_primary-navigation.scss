@@ -1,0 +1,166 @@
+@use '../base/mixins';
+@use '../base/functions';
+
+.primary-navigation {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-rem-700);
+	padding-block: var(--spacing-rem-400);
+	line-height: 1.1;
+	z-index: 100;
+
+	@include mixins.max-mq(medium) {
+		justify-content: space-between;
+	}
+
+	/* links and buttons */
+	&__nav {
+		width: 100%;
+		padding: var(--spacing-rem-400);
+		z-index: 100;
+
+		/* mobile */
+		@include mixins.max-mq(medium) {
+			position: absolute;
+			bottom: 0;
+			transform: translateY(100%);
+			display: none;
+			background-color: var(--clr-neutral-100);
+			border-radius: var(--borr-200);
+			box-shadow: 0 2rem 4rem hsl(0 0% 0% / 0.24);
+
+			&[data-expanded] {
+				display: block;
+			}
+		}
+
+		/* desktop/tablet */
+		@include mixins.mq(medium) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	/* links with arrows */
+	&__nav-links {
+		display: flex;
+		gap: var(--spacing-rem-400);
+
+		/* mobile */
+		@include mixins.max-mq(medium) {
+			flex-direction: column;
+			margin-bottom: var(--spacing-rem-400);
+		}
+	}
+
+	/* for positioning dropdown absolutely */
+	&__nav-item {
+		position: relative;
+	}
+
+	/* dropdown list */
+	&__dropdown {
+		--min-width: 16.8rem;
+		$bg-color: functions.get-color(primary, 700);
+
+		display: none; // hidden
+		padding: var(--spacing-rem-400);
+		margin-top: var(--spacing-rem-400);
+		min-width: var(--min-width);
+		background-color: fade-out($bg-color, 0.92);
+		border-radius: var(--borr-200);
+
+		@include mixins.mq(medium) {
+			position: absolute;
+			bottom: calc(var(--spacing-em-200) * -1);
+			transform: translateY(100%);
+			margin-top: 0;
+			background-color: var(--clr-neutral-100);
+			box-shadow: 0 2rem 4rem hsl(0 0% 0% / 0.24);
+		}
+	}
+
+	/* show dropdown when dropdown toggle active */
+	&__dropdown-toggle[data-expanded] + &__dropdown {
+		display: block;
+	}
+
+	/* link and arrow */
+	&__dropdown-toggle {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--spacing-em-200);
+
+		&::after {
+			--content: url('../images/icon-arrow-dark.svg');
+			content: var(--content);
+			display: block;
+			transition: transform 0.35s ease;
+
+			/* change arrow style */
+			@include mixins.mq(medium) {
+				--content: url('../images/icon-arrow-light.svg');
+			}
+		}
+
+		&[data-expanded] {
+			opacity: 1;
+
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	/* common styles for login 'button' and dropdown toggle */
+	&__login,
+	&__dropdown-toggle {
+		font-size: var(--fz-500);
+		font-weight: var(--fw-600);
+
+		/* moblie */
+		@include mixins.max-mq(medium) {
+			color: var(--clr-primary-700);
+			opacity: 1;
+		}
+
+		@include mixins.mq(medium) {
+			font-weight: var(--fw-700);
+		}
+	}
+
+	/* dropdown link */
+	&__dropdown-link {
+		font-size: var(--fz-dropdown-link);
+		text-decoration: none;
+		color: var(--clr-primary-700);
+
+		@include mixins.max-mq(medium) {
+			font-weight: var(--fw-600);
+			opacity: 0.75;
+		}
+
+		@include mixins.mq(medium) {
+			&:hover,
+			&:focus {
+				font-weight: var(--fw-700);
+			}
+		}
+	}
+
+	&__button-group {
+		@include mixins.max-mq(medium) {
+			flex-direction: column;
+			padding-top: var(--spacing-rem-400);
+			border-top: 1px solid #e8e4e4;
+		}
+	}
+
+	&__toggle-btn {
+		@include mixins.mq(medium) {
+			display: none;
+		}
+	}
+}

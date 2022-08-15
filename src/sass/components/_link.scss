@@ -1,0 +1,12 @@
+.link {
+	color: var(--clr-neutral-100);
+	opacity: 0.75;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover,
+	&:focus-visible {
+		text-decoration: underline;
+		opacity: 1;
+	}
+}

@@ -2,9 +2,18 @@
 @use './base/reset';
 @use './base/base';
 
+@use './layout/container';
 @use './layout/flow';
 @use './layout/even-columns';
+@use './layout/flex';
 
+@use './components/toggle-btn';
+@use './components/link';
+@use './components/button';
+@use './components/primary-header';
+@use './components/primary-navigation';
+
+@use './utility/visually-hidden';
 @use './utility/text-colors';
 @use './utility/background-colors';
 @use './utility/text-align';

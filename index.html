@@ -36,7 +36,7 @@
                 </a>
                 <button aria-expanded="false"
                         aria-controls="primary-nav"
-                        class="toggle-btn">
+                        class="toggle-btn primary-navigation__toggle-btn">
                     <img src="./dist/images/icon-hamburger.svg"
                          alt=""
                          class="toggle-btn__icon-hamburger">
@@ -54,11 +54,10 @@
                                aria-expanded="false"
                                aria-controls="product-dropdown"
                                class="link primary-navigation__dropdown-toggle">
-                                Product <img src="./dist/images/icon-arrow-dark.svg"
-                                     alt="">
+                                Product
                             </a>
                             <ul id="product-dropdown"
-                                class="primary-navigation__dropdown">
+                                class="primary-navigation__dropdown | flow">
                                 <li><a href="#"
                                        class="primary-navigation__dropdown-link">Overview</a>
                                 </li>
@@ -83,11 +82,10 @@
                                aria-expanded="false"
                                aria-controls="company-dropdown"
                                class="link primary-navigation__dropdown-toggle">
-                                Company <img src="./dist/images/icon-arrow-dark.svg"
-                                     alt="">
+                                Company
                             </a>
                             <ul id="company-dropdown"
-                                class="primary-navigation__dropdown">
+                                class="primary-navigation__dropdown | flow">
                                 <li><a href="#"
                                        class="primary-navigation__dropdown-link">About</a>
                                 </li>
@@ -109,11 +107,10 @@
                                aria-expanded="false"
                                aria-controls="connect-dropdown"
                                class="link primary-navigation__dropdown-toggle">
-                                Connect <img src="./dist/images/icon-arrow-dark.svg"
-                                     alt="">
+                                Connect
                             </a>
                             <ul id="connect-dropdown"
-                                class="primary-navigation__dropdown">
+                                class="primary-navigation__dropdown | flow">
                                 <li><a href="#"
                                        class="primary-navigation__dropdown-link">Contact</a>
                                 </li>
@@ -126,25 +123,27 @@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="button-group">
+                    <ul class="primary-navigation__button-group | flex">
                         <li><a href="#"
-                               class="link">Login</a></li>
-                        <li><a href=""
-                               class="button button--gradient">Sign up</a></li>
+                               class="link primary-navigation__login">Login</a></li>
+                        <li><a href="#"
+                               class="button button--white button--gradient">Sign up</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
 
-        <div class="primary-header__body | flow text-neutral-100 text-align-center">
-            <h1 class="primary-header__heading">A modern publishing platform</h1>
-            <p>Grow your audience and build your online brand</p>
-            <ul class="button-group">
-                <li><a href="#"
-                       class="button button--white">Start for Free</a></li>
-                <li><a href="#"
-                       class="button button--transparent">Learn More</a></li>
-            </ul>
+        <div class="container">
+            <div class="primary-header__body | flow text-neutral-100 text-align-center">
+                <h1 class="primary-header__heading">A modern publishing platform</h1>
+                <p class="primary-header__text">Grow your audience and build your online brand</p>
+                <ul class="flex flex-center">
+                    <li><a href="#"
+                           class="button button--white">Start for Free</a></li>
+                    <li><a href="#"
+                           class="button button--transparent">Learn More</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -204,7 +203,7 @@
         </section>
 
         <section class="features">
-            <h2 class="visaully-hidden">Features introduction</h2>
+            <h2 class="visually-hidden">Features introduction</h2>
             <div class="container">
                 <div class="even-columns">
                     <div class="image-container">
@@ -317,6 +316,7 @@
         </div>
     </footer>
 
+    <script src="./dist/js/main.min.js"></script>
 </body>
 
 </html>
