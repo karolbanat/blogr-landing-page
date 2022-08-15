@@ -6,6 +6,7 @@
 	&__image {
 		@include mixins.max-mq(large) {
 			margin-inline: auto;
+			margin-bottom: var(--spacing-em-700);
 		}
 
 		@include mixins.mq(large) {

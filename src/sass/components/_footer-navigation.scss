@@ -1,0 +1,16 @@
+@use '../base/mixins';
+
+.footer-navigation {
+	place-items: center;
+	gap: var(--spacing-em-700);
+
+	@include mixins.mq(medium) {
+		place-items: start;
+	}
+
+	&__nav-heading {
+		margin-bottom: var(--spacing-em-450);
+		font-family: var(--ff-secondary);
+		font-weight: var(--fw-500);
+	}
+}
