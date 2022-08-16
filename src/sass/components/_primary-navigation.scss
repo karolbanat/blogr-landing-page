@@ -99,11 +99,12 @@
 
 	/* link and arrow */
 	&__dropdown-toggle {
-		/* arrow and text align next ot each other  */
+		/* align arrow and text next ot each other  */
 		display: inline-flex;
 		align-items: center;
 		gap: var(--spacing-em-200);
 
+		/* arrow */
 		&::after {
 			--content: url('../images/icon-arrow-dark.svg');
 

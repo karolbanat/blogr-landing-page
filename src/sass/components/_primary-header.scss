@@ -17,13 +17,15 @@
 	}
 
 	&__text {
-		font-size: var(--fz-header-text);
 		margin-top: var(--spacing-em-200);
+		font-size: var(--fz-header-text);
 	}
 
 	/* background gradient with image */
 	&::before {
 		--bg-image: url('../images/bg-pattern-intro-mobile.svg');
+		--bg-image-size: 350%;
+		--bg-image-pos: 35% 40%;
 		$bg-gradient-left: functions.get-color(gradient, 300);
 		$bg-gradient-right: functions.get-color(gradient, 400);
 
@@ -35,15 +37,15 @@
 		height: 100%;
 		background-image: var(--bg-image), linear-gradient(115deg, $bg-gradient-left 15%, $bg-gradient-right 60%);
 		background-repeat: no-repeat, no-repeat;
-		background-position: 35% 40%, center;
-		background-size: 350%, auto;
+		background-position: var(--bg-image-pos), center;
+		background-size: var(--bg-image-size), auto;
 		border-bottom-left-radius: var(--borr-800);
 		z-index: -100;
 
 		@include mixins.mq(medium) {
 			--bg-image: url('../images/bg-pattern-intro-desktop.svg');
-			background-position: center left 25%;
-			background-size: 250%;
+			--bg-image-size: 250%;
+			--bg-image-pos: center left 25%;
 		}
 	}
 }

@@ -23,6 +23,7 @@
 	cursor: pointer;
 	transition: background-color 0.35s ease, color 0.35s ease;
 
+	/* white - primary button */
 	&--white {
 		--clr-text: var(--clr-primary-400);
 		--bg-button: var(--clr-neutral-100);
@@ -33,6 +34,7 @@
 		}
 	}
 
+	/* transparent button */
 	&--transparent {
 		--clr-text: var(--clr-neutral-100);
 		--bg-button: transparent;
@@ -45,6 +47,7 @@
 		}
 	}
 
+	/* gradient button only for small screens */
 	&--gradient {
 		@include mixins.max-mq(medium) {
 			$bg-gradient-left: functions.get-color(gradient, 300);

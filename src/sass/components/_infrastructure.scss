@@ -4,6 +4,25 @@
 .infrastructure {
 	position: relative;
 
+	/* elements */
+	&__header {
+		--flow-spacer: var(--spacing-em-200);
+
+		padding-top: clamp(var(--spacing-em-300), 7.5vw, var(--spacing-rem-900));
+		padding-bottom: var(--spacing-rem-900);
+		margin-inline: auto;
+		max-width: 60ch;
+	}
+
+	&__image {
+		max-height: 40rem;
+		margin-inline: auto;
+
+		@include mixins.mq(large) {
+			transform: scale(1.35) translate(-10%, 5%);
+		}
+	}
+
 	/* background */
 	&::before {
 		--bg-image-size: 60rem;
@@ -32,25 +51,6 @@
 			--bg-image-size: 100rem;
 			--bg-image-pos: -20rem -50rem;
 			height: 100%;
-		}
-	}
-
-	/* elements */
-	&__header {
-		--flow-spacer: var(--spacing-em-200);
-
-		padding-top: clamp(var(--spacing-em-300), 7.5vw, var(--spacing-rem-900));
-		padding-bottom: var(--spacing-rem-900);
-		margin-inline: auto;
-		max-width: 60ch;
-	}
-
-	&__image {
-		max-height: 40rem;
-		margin-inline: auto;
-
-		@include mixins.mq(large) {
-			transform: scale(1.35) translate(-10%, 5%);
 		}
 	}
 }

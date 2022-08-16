@@ -1,4 +1,4 @@
-.section {
+.section-padding {
 	--padding-top-min: var(--spacing-rem-900);
 	--padding-top-max: calc(var(--padding-top-min) * 1.5);
 	--padding-top: clamp(var(--padding-top-min), 15vw, var(--padding-top-max));

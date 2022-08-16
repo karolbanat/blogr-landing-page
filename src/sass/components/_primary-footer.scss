@@ -4,6 +4,7 @@
 	font-size: var(--fz-footer);
 	line-height: 1.1;
 
+	/* footer background */
 	&::before {
 		content: '';
 		position: absolute;
